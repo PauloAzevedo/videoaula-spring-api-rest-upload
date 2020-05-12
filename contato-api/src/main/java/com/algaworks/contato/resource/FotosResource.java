@@ -17,8 +17,8 @@ public class FotosResource {
 	private Disco disco;
 	
 	@PostMapping
-	public void upload(@RequestParam MultipartFile foto) {
-		disco.salvarFoto(foto);
+	public String upload(@RequestParam MultipartFile foto) {
+		return disco.salvarFoto(foto);
 	}
 
 }
